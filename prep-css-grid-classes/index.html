@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Grid Classes</title>
+  <link rel="stylesheet" href="reset.css">
+  <style>
+/* stylelint-disable block-no-empty */
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  max-width: 992px;
+  margin: auto;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+}
+
+.column {
+  flex-basis: calc(100% / 3);
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+img {
+  width: 100%;
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Complete the HTML here -->
+<div class="container">
+  <h1>Indiana Jones</h1>
+  <div class="row">
+    <div class="column">
+<img src="images/raiders.jpg" alt="" width="100%">
+<h3>Raiders of the Lost Ark</h3>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis reiciendis aut blanditiis a illum optio temporibus soluta cum explicabo voluptatibus eius molestias fugiat asperiores maxime minima, quas esse numquam culpa?</p>
+    </div>
+    <div class="column">
+<img src="images/temple.jpg" alt="" width="100%">
+<h3>Temple of Doom</h3>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis eveniet laudantium ullam aliquid, perferendis ex, explicabo ad hic consectetur, minus nesciunt! Consequatur quas minus corrupti iure? Cumque ullam perspiciatis temporibus.</p>
+    </div>
+    <div class="column">
+<img src="images/crusade.png" alt="" width="100%">
+<h3>The Last Crusade</h3>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam laborum error a accusamus culpa ullam quibusdam consequatur molestiae veritatis quos exercitationem quis, eos aliquam velit id iusto commodi, quidem fugit.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
