@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Conditionals</title>
+</head>
+
+<body>
+  <script>
+    function integerRandGen(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    } // Generate a random integer between min and max inclusive
+    function display(string, value) {
+      return string + `${value}` + '.';
+    } // repeated display pattern of random number
+
+//
+    let age = integerRandGen(10, 60);
+    if (age < 18) {
+      console.log('A child. ', display('Your age is ', age));
+    } else {
+      console.log('An adult. ', display('Your age is ', age));
+    }
+//
+    let student1Score = integerRandGen(1, 100);
+    if (student1Score > 70) {
+      console.log('Congrats you received a passing grade!', display('Your first score is ', student1Score));
+    } else {
+      console.log('Oh no you failed!', display('Your first score is ', student1Score));
+    }
+//
+    let student2Score = integerRandGen(1, 105);
+    if (student2Score < 60) {
+      console.log('F. ', display('Your second score is ', student2Score));
+    } else if (student2Score < 70) {
+      console.log('D. ', display('Your second score is ', student2Score));
+    } else if (student2Score < 80) {
+      console.log('C. ', display('Your second score is ', student2Score));
+    } else if (student2Score < 90) {
+      console.log('B. ', display('Your second score is ', student2Score));
+    } else if (student2Score < 100) {
+      console.log('A. ', display('Your second score is ', student2Score));
+    } else {
+      console.log('A++. ', display('Your second score is ', student2Score));
+    }
+//
+    let seasonPick = ['summer', 'spring', 'autumn', 'winter', 'invalid'];
+    let season = seasonPick[integerRandGen(0, 4)];
+    if (season === 'summer') {
+      console.log("It's hot today. ", display("It's ", season));
+    } else if (season === 'spring') {
+      console.log('The flowers are blooming. ', display("it's ", season));
+    } else if (season === 'autumn') {
+      console.log('The leaves are changing colors. ', display("It's ", season));
+    } else if (season === 'winter') {
+      console.log("It's cold today. ", display("It's ", season));
+    } else {
+      console.log('Please enter a valid season', display("It's ", season));
+    }
+//
+    let dayPick = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+    let today = dayPick[integerRandGen(0, 6)];
+    if (today === 'Saturday' || today === 'Sunday') {
+      console.log('Have a good weekend!', display('Today is ', today));
+    } else {
+      console.log('Its a weekday! Go to work :(.', display('Today is ', today));
+    }
+  </script>
+</body>
+
+</html>
